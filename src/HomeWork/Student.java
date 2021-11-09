@@ -8,11 +8,17 @@ public class Student {
     double mathAverageGrade;
     double economicsAverageGrade;
     double foreignAverageGrade;
+
+    double mean (double mathAverageGrade, double economicsAverageGrade, double foreignAverageGrade){
+        double result = (mathAverageGrade + economicsAverageGrade + foreignAverageGrade)/3;
+        return result;
+    }
 }
 
 
 class StudentTest {
     public static void main(String[] args) {
+
         Student st1 = new Student();
         st1.studId = 1;
         st1.name = "Viktor";
@@ -39,11 +45,11 @@ class StudentTest {
         st3.foreignAverageGrade = 4.1;
 
 
-        System.out.println("Average grade " + st1.name + " " + st1.surname + " = " + (st1.mathAverageGrade + st1.economicsAverageGrade + st1.foreignAverageGrade) / 3);
+        System.out.println("Average grade " + st1.name + " " + st1.surname + " = " + st1.mean(5,4.2,4.8));
 
-        System.out.println("Average grade " + st2.name + " " + st2.surname + " = " + (st2.mathAverageGrade + st2.economicsAverageGrade + st2.foreignAverageGrade) / 3);
+        System.out.println("Average grade " + st2.name + " " + st2.surname + " = " + st2.mean(4.9,4.5,4.8));
 
-        System.out.println("Average grade " + st3.name + " " + st3.surname + " = " + (st3.mathAverageGrade + st3.economicsAverageGrade + st3.foreignAverageGrade) / 3);
+        System.out.println("Average grade " + st3.name + " " + st3.surname + " = " + st3.mean(5,5,4.1));
 
     }
 
