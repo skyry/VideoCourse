@@ -9,9 +9,9 @@ public class Student {
     double economicsAverageGrade;
     double foreignAverageGrade;
 
-    double mean (Student st1){
-        double result = (st1.economicsAverageGrade + st1.economicsAverageGrade + st1.economicsAverageGrade)/3;
-        System.out.println("Average grade " + st1.name + " " + st1.surname + " = " + result);
+    double mean (Student st){
+        double result = (st.economicsAverageGrade + st.economicsAverageGrade + st.economicsAverageGrade)/3;
+        System.out.println("Average grade " + st.name + " " + st.surname + " = " + result);
         return result;
     }
 }
@@ -27,7 +27,7 @@ class StudentTest {
         st1.mathAverageGrade = 5;
         st1.economicsAverageGrade = 4.2;
         st1.foreignAverageGrade = 4.8;
-        st1.mean(st1);
+
 
 
         Student st2 = new Student();
@@ -45,6 +45,11 @@ class StudentTest {
         st3.mathAverageGrade = 5;
         st3.economicsAverageGrade = 5;
         st3.foreignAverageGrade = 4.1;
+
+
+        st1.mean(st1);
+        st2.mean(st2);
+        st3.mean(st3);
 
 
     }
