@@ -8,7 +8,7 @@ public class Lessons6 {
     }
 
     int summ (int a){
-        int output = a+0;
+        int output = a;
         System.out.println(output);
         return output;
     }
