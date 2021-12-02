@@ -11,14 +11,16 @@ public class Mail {
 
         for (int i = 0; i<t.length(); i++){
             if (t.charAt(i) == '@'){
-                t.charAt(i)!= ';'
-            }){
                 System.out.print(t.charAt(i+1));
-
+                    }
+            if (t.charAt(i) != '.'){
+                System.out.print(t.charAt(i));
             }
+
             else {
                 System.out.println();
-              }
+            }
+
 
             }
 
