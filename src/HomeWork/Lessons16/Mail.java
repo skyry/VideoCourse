@@ -21,7 +21,7 @@ public class Mail {
 
     public static void main(String[] args) {
         Mail mail1 = new Mail();
-        mail1.email("ya@yahoo.com; on@mail.ru; ona@gmail.com");
+        mail1.email("ya@yahoo.com; on@mail.ru; ona@gmail.com;");
     }
 
 
