@@ -32,6 +32,20 @@ public class Test1 {
         boolean i9 = s2.endsWith("efg");
         System.out.println(i9);
 
+        String s3 = "Privet";
+        System.out.println(s3.isBlank());
+
+        String s4 = "                    ";
+        System.out.println(s4.isBlank());
+
+        String s5 = "";
+        System.out.println(s5.isEmpty());
+
+        String s6 = "      privet               ";
+        System.out.println(s6.stripTrailing());
+
+
+
 
     }
 }
