@@ -3,23 +3,21 @@ package HomeWork.Lessons16;
 
 public class Mail {
 
-    public void email(String text) {
-        String t = text;
+    public void email(String e) {
         int c1 = 0;
         int c2 = 0;
 
-        for (int i = 0; i < t.length(); i++) {
+        for (int i = 0; i < e.length(); i++) {
 
-            if (t.charAt(i) == '@') {
-                c1 = (t.indexOf('@', i)) + 1;
+            if (e.charAt(i) == '@') {
+                c1 = (e.indexOf('@', i)) + 1;
             }
-            if (t.charAt(i) == '.') {
-                c2 = t.indexOf('.', i);
-                System.out.println(t.substring(c1, c2));
+            if (e.charAt(i) == '.') {
+                c2 = e.indexOf('.', i);
+                System.out.println(e.substring(c1, c2));
             }
         }
     }
-
 
     public static void main(String[] args) {
         Mail mail1 = new Mail();
