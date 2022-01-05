@@ -6,16 +6,18 @@ public class ArrayTest {
 
     public static void sortirovka(int[] array) {
         //Arrays.sort(array);
-        int a;
-        int b;
+        int a = 0;
+        int b = 0;
         for (int i = 0; i < array.length; i++) {
-            int index1 = array[i];
             for (int j=i+1; j<array.length;j++){
-                int index2 = array[j];
-                if (index1>index2){
-                    a=index1;
+                if (array[i]>array[j]&&array[j]<array[j-1]){
+                    a=array[j];
+                    b=j;
+                    array[b] = array[i];
+                    array[i] = a;
                 }
             }
+
         }
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]);
