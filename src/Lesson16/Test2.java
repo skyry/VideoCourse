@@ -15,9 +15,15 @@ public class Test2 {
 
         String s5 = s1.replace('b', 'B');
         System.out.println(s5);
+        //System.out.println(s1==s5);
 
         String s6 = s1.replace("abcdef", "ABCDEF");
         System.out.println(s6);
+
+        String s7 = "privet,";
+        String s8 = "drug";
+        System.out.println(s7.concat(s8));
+        System.out.println(s7+s8);
 
 
     }

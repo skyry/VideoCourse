@@ -45,7 +45,5 @@ public class Test1 {
         System.out.println(s6.stripTrailing());
 
 
-
-
     }
 }
