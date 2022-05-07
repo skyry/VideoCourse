@@ -12,7 +12,7 @@ public class Test6 {
         String s3 = s1.toUpperCase();
         System.out.println(s3);
 
-        boolean s4 = s1.contains("IV");
+        boolean s4 = s1.contains("iv");
         System.out.println(s4);
     }
 }

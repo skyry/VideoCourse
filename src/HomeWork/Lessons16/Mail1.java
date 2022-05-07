@@ -7,9 +7,9 @@ class Mail1 {
         int c = 0; // позиция символа ;
         while (c < e.length() - 1) {
 
-            a = e.indexOf('@', c);
-            b = e.indexOf('.', c);
-            c = e.indexOf(';', c + 1);
+            a = e.indexOf('@', c); //2, 16
+            b = e.indexOf('.', c); //8, 21
+            c = e.indexOf(';', c + 1); //12, 24
             System.out.println(e.substring(a + 1, b));
         }
 
