@@ -21,7 +21,7 @@ public class Test2 {
         StringBuilder sb3 = new StringBuilder("Hello world");
         StringBuilder sb4 = new StringBuilder("Hello");
 
-        System.out.println(ravenstvo1(sb1, sb4));
+        System.out.println(ravenstvo1(sb1, sb2));
 
     }
 }
