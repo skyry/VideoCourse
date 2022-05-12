@@ -16,7 +16,7 @@ public class Test4 {
             System.out.print(array1[i] + " ");
         }
 
-        int index = Arrays.binarySearch(array1,5);
+        int index = Arrays.binarySearch(array1,0);
         System.out.println();
         System.out.println(index);
 
