@@ -1,6 +1,8 @@
 package Lesson20;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Test6 {
     public static void main(String[] args) {
@@ -26,12 +28,18 @@ public class Test6 {
         for(Object i: array1){
             System.out.print(i+" ");
         }
-        */
+
 
         StringBuilder [] array1= list1.toArray(new StringBuilder[10]);
         for (StringBuilder i:array1){
             System.out.print(i+" ");
         }
+
+         */
+
+        StringBuilder[] array = {sb1, sb2, sb3, sb3};
+        List<StringBuilder> list8 = Arrays.asList(array);
+        System.out.println(list8);
 
 
     }
