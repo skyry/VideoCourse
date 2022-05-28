@@ -34,6 +34,7 @@ class EmployeeNew {
 
 class TeacherNew extends EmployeeNew {
     //Overriding метода eat
+    @Override
     public Eda eat() {
         System.out.println("Kushaet uchitel");
         Eda e = new Eda();
