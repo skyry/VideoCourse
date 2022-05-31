@@ -27,7 +27,6 @@ public class Test1 {
         m1.run();
         m1.speak();
         m1.sleep();
-        m1.
     }
 }
 
