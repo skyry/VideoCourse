@@ -43,7 +43,6 @@ abstract class Animal {
 }
 
 abstract class Fish extends Animal {
-    String name;
 
     public Fish(String name) {
         super(name);
@@ -58,7 +57,6 @@ abstract class Fish extends Animal {
 }
 
 abstract class Bird extends Animal implements Speakable {
-    String name;
 
     public Bird(String name) {
         super(name);
@@ -75,8 +73,6 @@ abstract class Bird extends Animal implements Speakable {
 }
 
 abstract class Mammal extends Animal implements Speakable {
-    String name;
-
     public Mammal(String name) {
         super(name);
         this.name = name;
@@ -93,7 +89,6 @@ interface Speakable {
 }
 
 class Mechenosec extends Fish {
-    String name;
 
     public Mechenosec(String name) {
         super(name);
@@ -113,7 +108,6 @@ class Mechenosec extends Fish {
 }
 
 class Pingvin extends Bird {
-    String name;
 
     public Pingvin(String name) {
         super(name);
@@ -142,8 +136,6 @@ class Pingvin extends Bird {
 }
 
 class Lev extends Mammal {
-    String name;
-
     public Lev(String name) {
         super(name);
         this.name = name;

@@ -1,21 +1,16 @@
-package Lessons22;
+package Lessons25;
 
 public class Test3 {
- /*   public static void main(String[] args) {
-        Doctor doc = new Doctor();
-        doc.name = "Ivan";
-        doc.age = 55;
-        doc.experience = 25;
-        doc.eat();
-        doc.specializaciya = "Hirurg";
-        doc.sleep();
-        doc.lechit();
-    }*/
+    public static void main(String[] args) {
+        Employee emp1 = new Doctor();
+        Employee emp2 = new Teacher();
+        Employee emp3 = new Driver();
+        Doctor d1 = (Doctor) emp1;
+        System.out.println(d1.specializaciya);
+        d1.lechit();
 
+    }
 }
-
-
-/*
 class Employee{
     String name;
     int age;
@@ -27,7 +22,7 @@ class Employee{
 
 class Doctor extends Employee {
 
-    String specializaciya;
+    String specializaciya = "Hirurg";
     void lechit(){System.out.println("Lechit");}
 }
 
@@ -41,4 +36,4 @@ class Driver extends Employee {
 
     String nazvanieMashini;
     void vodit(){System.out.println("Vodit");}
-}*/
+}
