@@ -1,10 +1,41 @@
 package HomeWork.Lessons24;
 
 public class Test1 {
+    public static void main(String[] args) {
+        Mechenosec m = new Mechenosec("Mechenosec");
+        System.out.println(m.name);
+        m.eat();
+        m.sleep();
+        m.swim();
+        System.out.println();
+
+        Speakable s = new Pingvin("Speakable");
+        s.speak();
+
+        System.out.println();
+
+        Animal a = new Lev("Animal");
+        System.out.println(a.name);
+        a.eat();
+        a.sleep();
+
+        System.out.println();
+
+        Mammal m1 = new Lev("Mammal");
+        System.out.println(m1.name);
+        m1.eat();
+        m1.run();
+        m1.speak();
+        m1.sleep();
+        m1.
+    }
 }
 
 abstract class Animal {
+    String name;
+
     public Animal(String name) {
+        this.name = name;
     }
 
     abstract void eat();
@@ -13,13 +44,11 @@ abstract class Animal {
 }
 
 abstract class Fish extends Animal {
-    String nameFish;
-    public Fish(String nameFish, String name) {
-        super(name);
-        this.nameFish = nameFish;
-    }
+    String name;
 
-        super();
+    public Fish(String name) {
+        super(name);
+        this.name = name;
     }
 
     void sleep() {
@@ -30,27 +59,28 @@ abstract class Fish extends Animal {
 }
 
 abstract class Bird extends Animal implements Speakable {
-    String nameBird;
+    String name;
 
-    public Bird(String nameBird, String name) {
+    public Bird(String name) {
         super(name);
-        this.nameBird = nameBird;
+        this.name = name;
     }
 
     abstract void fly();
 
     @Override
     public void speak() {
-        System.out.println(nameBird + " sings");
+        System.out.println(name + " sings");
         ;
     }
 }
 
 abstract class Mammal extends Animal implements Speakable {
-    String nameMammal;
-    public Mammal(String nameMammal, String name) {
+    String name;
+
+    public Mammal(String name) {
         super(name);
-        this.nameMammal = nameMammal;
+        this.name = name;
     }
 
     abstract void run();
@@ -64,10 +94,11 @@ interface Speakable {
 }
 
 class Mechenosec extends Fish {
-    String nameMechenosec;
-    public Mechenosec(String nameMechenosec, String nameFish) {
-        super(nameFish);
-        this.nameMechenosec = nameMechenosec;
+    String name;
+
+    public Mechenosec(String name) {
+        super(name);
+        this.name = name;
     }
 
     @Override
@@ -83,10 +114,55 @@ class Mechenosec extends Fish {
 }
 
 class Pingvin extends Bird {
-    String namePingvin;
-    public Pingvin(String namePingvin, String nameBird) {
-        super(nameBird);
-        this.namePingvin = namePingvin;
+    String name;
+
+    public Pingvin(String name) {
+        super(name);
+        this.name = name;
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("Pingvin lybit est ribu");
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println("Pingvini spyat prijavshis drug k drugu!");
+    }
+
+    @Override
+    public void fly() {
+        System.out.println("Pingvini ne umeyut letat");
+    }
+
+    @Override
+    public void speak() {
+        System.out.println("Pingvini ne umeyut pet kak solovyi");
+    }
+}
+
+class Lev extends Mammal {
+    String name;
+
+    public Lev(String name) {
+        super(name);
+        this.name = name;
+    }
+
+    @Override
+    public void eat() {
+        System.out.println("Lev, kak lyboy xishnik, lybit myaso");
+    }
+
+    @Override
+    public void sleep() {
+        System.out.println("Bolshuyu chast dnya lev spit");
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Lev - eto ne samaya bistraya koshka");
     }
 
 }
