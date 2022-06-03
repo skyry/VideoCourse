@@ -1,6 +1,7 @@
 package HomeWork.Lessons25;
 
 import HomeWork.Lessons23.A;
+import HomeWork.Lessons8.Pi;
 
 import java.sql.SQLOutput;
 
@@ -32,34 +33,67 @@ public class Test1 {
         m1.speak();
         m1.sleep();*/
 
-        Speakable [] sp ={new Pingvin("P"),new Lev("L")};
-        for ()
+        Animal a1 = new Mechenosec("M1");
+        Animal a2 = new Pingvin("P1");
+        Animal a3 = new Lev("L1");
+        Fish f1 = new Mechenosec("M2");
+        Bird b1 = new Pingvin("P2");
+        Mammal m1 = new Lev("L2");
+        Mechenosec mech1 = new Mechenosec("M3");
+        Pingvin p1 = new Pingvin("P3");
+        Lev l1 = new Lev("L3");
+        Speakable sp1 = new Lev("L4");
+        Speakable sp2 = new Pingvin("P4");
 
+        Animal[] an1 = {a1, a2, a3, f1, b1, m1, mech1, p1, l1};
+        Speakable[] sp3 = {sp1, sp2, b1, m1, p1, l1};
 
-        Animal [] an ={new Mechenosec("Mechenosec"), new Pingvin("Pingvin"),new Lev("Lev")};
-        for(Animal i:an){
-            if(i instanceof Mechenosec){
-                System.out.println(i.name);
-                i.eat();
-                ((Mechenosec) i).swim();
-                i.sleep();
-                System.out.println();
+        for (Animal i : an1) {
+            if (i instanceof Mechenosec) {
+                Mechenosec m = (Mechenosec) i;
+                System.out.println(m.name);
+                m.eat();
+                m.sleep();
+                m.swim();
+            } else if (i instanceof Pingvin) {
+                Pingvin p = (Pingvin) i;
+                System.out.println(p.name);
+                p.eat();
+                p.sleep();
+                p.fly();
+                p.speak();
+            } else if (i instanceof Lev) {
+                Lev l = (Lev) i;
+                System.out.println(l.name);
+                l.eat();
+                l.run();
+                l.sleep();
+                l.speak();
             }
-            else if (i instanceof Pingvin){
-                System.out.println(i.name);
-                i.sleep();
-                i.eat();
-                ((Pingvin) i).speak();
-                ((Pingvin) i).fly();
-            }
-            else if (i instanceof Lev){
-                System.out.println(i.name);
-                ((Lev) i).speak();
-                i.eat();
-                i.sleep();
-                ((Lev) i).run();
-            }
+            System.out.println("----------------------------------------");
         }
+
+        for (Speakable s : sp3) {
+            if (s instanceof Lev) {
+                Lev l = (Lev) s;
+                System.out.println(l.name);
+                l.speak();
+                l.run();
+                l.eat();
+                l.sleep();
+            } else if (s instanceof Pingvin) {
+                Pingvin p = (Pingvin) s;
+                System.out.println(p.name);
+                p.eat();
+                p.fly();
+                p.sleep();
+                p.speak();
+            }
+            System.out.println("----------------------------------------");
+        }
+
+
+
     }
 }
 
