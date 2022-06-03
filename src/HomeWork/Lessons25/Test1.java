@@ -32,14 +32,32 @@ public class Test1 {
         m1.speak();
         m1.sleep();*/
 
-        Speakable [] sp ={};
+        Speakable [] sp ={new Pingvin("P"),new Lev("L")};
+        for ()
+
+
         Animal [] an ={new Mechenosec("Mechenosec"), new Pingvin("Pingvin"),new Lev("Lev")};
         for(Animal i:an){
-            if(i instanceof Animal){
+            if(i instanceof Mechenosec){
                 System.out.println(i.name);
                 i.eat();
+                ((Mechenosec) i).swim();
                 i.sleep();
                 System.out.println();
+            }
+            else if (i instanceof Pingvin){
+                System.out.println(i.name);
+                i.sleep();
+                i.eat();
+                ((Pingvin) i).speak();
+                ((Pingvin) i).fly();
+            }
+            else if (i instanceof Lev){
+                System.out.println(i.name);
+                ((Lev) i).speak();
+                i.eat();
+                i.sleep();
+                ((Lev) i).run();
             }
         }
     }
