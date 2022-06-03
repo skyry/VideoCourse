@@ -1,8 +1,12 @@
-package HomeWork.Lessons24;
+package HomeWork.Lessons25;
+
+import HomeWork.Lessons23.A;
+
+import java.sql.SQLOutput;
 
 public class Test1 {
     public static void main(String[] args) {
-        Mechenosec m = new Mechenosec("Mechenosec");
+       /* Mechenosec m = new Mechenosec("Mechenosec");
         System.out.println(m.name);
         m.eat();
         m.sleep();
@@ -26,7 +30,18 @@ public class Test1 {
         m1.eat();
         m1.run();
         m1.speak();
-        m1.sleep();
+        m1.sleep();*/
+
+        Speakable [] sp ={};
+        Animal [] an ={new Mechenosec("Mechenosec"), new Pingvin("Pingvin"),new Lev("Lev")};
+        for(Animal i:an){
+            if(i instanceof Animal){
+                System.out.println(i.name);
+                i.eat();
+                i.sleep();
+                System.out.println();
+            }
+        }
     }
 }
 
