@@ -8,11 +8,11 @@ public class Test1 {
         int[] array = initializeArray();
         int max = max(array);
         //System.out.println();
-        //System.out.println(max);
+        System.out.println(max);
     }
 
     public static int[] initializeArray() throws Exception {
-        int[] array = new int[5];
+        int[] array = new int[20];
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         for (int i = 0; i < array.length; i++) {
             String s1 = bufferedReader.readLine();
@@ -23,15 +23,13 @@ public class Test1 {
     }
 
     public static int max(int[] array) {
-        int max=0;
-        for (int i:array){
-            if (array[i]>max){
-                max = array[i];
+        int m = 0;
+        for (int i : array) {
+            if (i > m) {
+                m = i;
             }
-            else continue;
         }
-        // найди максимальное значение
-        return max;
+        return m;
     }
 }
 
