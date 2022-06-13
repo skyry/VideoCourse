@@ -9,16 +9,16 @@ public class Test1 {
             try {
                 t.drink("beer");
             } catch (NoWaterException e) {
-                System.out.println(e);
+                System.out.println(e.getMessage());
             } catch (Exception e) {
-                System.out.println(e);
+                System.out.println(e.getMessage());
             } finally {
                 System.out.println("This is finally block");
             }
         } catch (RuntimeException e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
         }
     }
 }
@@ -37,18 +37,16 @@ class NoWaterException extends Exception {
 
 class Tiger {
     void eat(String eat) {
-        if (eat != "meat") {
+        if (!eat.equals("meat")) {
             throw new NoMeatException("Tiger dosen`t eat: " + eat);
-        } else if (eat == "meat") {
-            System.out.println("Tiger eats meat");
         }
+        System.out.println("Tiger eats meat");
     }
 
     void drink(String water) throws NoWaterException {
-        if (water != "water") {
+        if (!water.equals("water")) {
             throw new NoWaterException("Tiger dosen`t drink: " + water);
-        } else if (water == "water") {
-            System.out.println("Tiger drinks water");
         }
+        System.out.println("Tiger drinks water");
     }
 }
