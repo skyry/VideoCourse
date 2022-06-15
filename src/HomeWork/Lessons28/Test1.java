@@ -14,12 +14,12 @@ public class Test1 {
 
     void smena(LocalDateTime ldt1, LocalDateTime ldt2, Period p1, Duration d1) {
         while (ldt1.isBefore(ldt2)) {
-            System.out.println("Work with: " + ldt1.format(df1));
+            System.out.print("Work with: " + ldt1.format(df1));
             ldt1 = ldt1.plus(p1);
-            System.out.println("Before: " + ldt1.format(df1));
-            System.out.println("Rest with: " + ldt1.format(df2));
+            System.out.println(" Before: " + ldt1.format(df1));
+            System.out.print("Rest with: " + ldt1.format(df2));
             ldt1 = ldt1.plus(d1);
-            System.out.println("Before: " + ldt1.format(df2));
+            System.out.println(" Before: " + ldt1.format(df2));
         }
 
     }
@@ -28,7 +28,7 @@ public class Test1 {
 
         LocalDateTime ldt1 = LocalDateTime.of(2021, 01, 01, 00, 00);
         LocalDateTime ldt2 = LocalDateTime.of(2022, 01, 01, 23, 40);
-        Period p1 = Period.ofMonths(1);
+        Period p1 = Period.of(0, 1, 5);
         Duration d1 = Duration.ofDays(10);
 
         Test1 t = new Test1();
