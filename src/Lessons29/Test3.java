@@ -2,10 +2,10 @@ package Lessons29;
 
 import java.util.ArrayList;
 
-public class Test2 {
+public class Test3 {
 }
 
-/*class Student {
+class Student {
     String name;
     char sex;
     int age;
@@ -50,25 +50,27 @@ class StudentInfo {
         list.add(st5);
 
         StudentInfo si = new StudentInfo();
-        FindStudentsOverGrade fsog = new FindStudentsOverGrade();
-        FindStudentsUnderGrade fsug = new FindStudentsUnderGrade();
-        FindStudentsOverAge fsoa = new FindStudentsOverAge();
-        FindStudentsUnderAge fsua = new FindStudentsUnderAge();
-        FindStudentsBySex fsbs = new FindStudentsBySex();
-        FindStudentsMixCondition fsmc = new FindStudentsMixCondition();
 
         System.out.println("---------------------------OverGrade--------------------------------");
-        si.testStudents(list, fsog);
+        si.testStudents(list, (Student st) -> {
+            return st.avgGrade > 8.5;                   //полный вариант написания lambda expressions
+        });
         System.out.println("---------------------------UnderGrade-------------------------------");
-        si.testStudents(list, fsug);
+        si.testStudents(list, st -> st.avgGrade < 9); //короткий вариант написания lambda expressions
         System.out.println("----------------------------OverAge---------------------------------");
-        si.testStudents(list, fsoa);
+        si.testStudents(list, st -> {
+            return st.age > 25;                       //смешаный вариант написания lambda expressions
+        });
         System.out.println("----------------------------UnderAge--------------------------------");
-        si.testStudents(list, fsua);
+        si.testStudents(list, (Student st) -> st.age < 27); //смешаный вариант написания lambda expressions
         System.out.println("------------------------------BySex---------------------------------");
-        si.testStudents(list, fsbs);
+        si.testStudents(list, (Student st) -> {
+            return st.sex == 'm';                       //полный вариант написания lambda expressions
+        });
         System.out.println("--------------------------MixConditions-----------------------------");
-        si.testStudents(list, fsmc);
+        si.testStudents(list, (Student st) -> {
+            return st.avgGrade > 7.2 && st.age < 23 && st.sex == 'f'; //полный вариант написания lambda expressions
+        });
 
 
     }
@@ -79,44 +81,5 @@ interface StudentCheks {
     boolean test(Student s);
 }
 
-class FindStudentsOverGrade implements StudentCheks {
-    @Override
-    public boolean test(Student s) {
-        return s.avgGrade > 8.5;
-    }
-}
 
-class FindStudentsUnderGrade implements StudentCheks {
-    @Override
-    public boolean test(Student s) {
-        return s.avgGrade < 9;
-    }
-}
 
-class FindStudentsOverAge implements StudentCheks {
-    @Override
-    public boolean test(Student s) {
-        return s.age > 25;
-    }
-}
-
-class FindStudentsUnderAge implements StudentCheks {
-    @Override
-    public boolean test(Student s) {
-        return s.age < 27;
-    }
-}
-
-class FindStudentsBySex implements StudentCheks {
-    @Override
-    public boolean test(Student s) {
-        return s.sex == 'm';
-    }
-}
-
-class FindStudentsMixCondition implements StudentCheks {
-    @Override
-    public boolean test(Student s) {
-        return (s.avgGrade > 7.2 && s.age < 23 && s.sex == 'f');
-    }
-}*/
