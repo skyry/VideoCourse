@@ -39,20 +39,20 @@ class TestEmployee {
         Employee emp3 = new Employee("Igor", "Engineer", 450);
         Employee emp4 = new Employee("Evgen", "IT", 500);
         Employee emp5 = new Employee("IT", "IT", 150);
+        Employee emp6 = new Employee("Elena", "IT", 450);
         list.add(emp1);
         list.add(emp2);
         list.add(emp3);
         list.add(emp4);
         list.add(emp5);
+        list.add(emp6);
 
         TestEmployee t1 = new TestEmployee();
-        t1.filtrEmployee(list,x->x.department=="IT"&&x.salary>200);
+        t1.filtrEmployee(list, x -> x.department == "IT" && x.salary > 200);
         System.out.println("----------------------------------------");
-        //t1.filtrEmployee(list,x->x.name == "");
-
-
+        t1.filtrEmployee(list, x -> x.name.contains("E") && x.salary != 450);
         System.out.println("----------------------------------------");
-        t1.filtrEmployee(list,x->x.name==x.department);
+        t1.filtrEmployee(list, x -> x.name == x.department);
 
     }
 
