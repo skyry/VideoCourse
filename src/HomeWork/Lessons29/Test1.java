@@ -38,7 +38,7 @@ class TestEmployee {
         Employee emp2 = new Employee("Petro", "Driver", 600);
         Employee emp3 = new Employee("Igor", "Engineer", 450);
         Employee emp4 = new Employee("Evgen", "IT", 500);
-        Employee emp5 = new Employee("Alex", "IT", 150);
+        Employee emp5 = new Employee("IT", "IT", 150);
         list.add(emp1);
         list.add(emp2);
         list.add(emp3);
@@ -48,7 +48,11 @@ class TestEmployee {
         TestEmployee t1 = new TestEmployee();
         t1.filtrEmployee(list,x->x.department=="IT"&&x.salary>200);
         System.out.println("----------------------------------------");
-        t1.filtrEmployee(list,x->x.name == "");
+        //t1.filtrEmployee(list,x->x.name == "");
+
+
+        System.out.println("----------------------------------------");
+        t1.filtrEmployee(list,x->x.name==x.department);
 
     }
 
