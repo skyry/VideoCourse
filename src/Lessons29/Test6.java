@@ -1,11 +1,11 @@
 package Lessons29;
 
 import java.util.ArrayList;
+import java.util.function.Predicate;
 
-public class Test3 {
+public class Test6 {
 }
 
-/*
 class Student {
     String name;
     char sex;
@@ -28,9 +28,9 @@ class StudentInfo {
                 ", course: " + st.course + ", average grade: " + st.avgGrade);
     }
 
-    void testStudents(ArrayList<Student> al, StudentCheks sc) {
+    void testStudents(ArrayList<Student> al, Predicate<Student> t) {
         for (Student s : al) {
-            if (sc.test(s)) {
+            if (t.test(s)) {
                 printStudent(s);
             }
         }
@@ -51,8 +51,16 @@ class StudentInfo {
         list.add(st5);
 
         StudentInfo si = new StudentInfo();
+        for (Student s: list){
+            System.out.println(s.name);
+        }
+        System.out.println("--------------------------------------------");
+        list.removeIf(x->x.name.endsWith("a"));
+        for (Student s: list){
+            System.out.println(s.name);
+        }
 
-        System.out.println("---------------------------OverGrade--------------------------------");
+        /*System.out.println("---------------------------OverGrade--------------------------------");
         si.testStudents(list, (Student st) -> {
             return st.avgGrade > 8.5;                   //полный вариант написания lambda expressions
         });
@@ -71,17 +79,9 @@ class StudentInfo {
         System.out.println("--------------------------MixConditions-----------------------------");
         si.testStudents(list, (Student st) -> {
             return st.avgGrade > 7.2 && st.age < 23 && st.sex == 'f'; //полный вариант написания lambda expressions
-        });
+        });*/
 
 
     }
 
 }
-
-interface StudentCheks {
-    boolean test(Student s);
-}
-*/
-
-
-
