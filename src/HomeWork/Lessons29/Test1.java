@@ -50,7 +50,7 @@ class TestEmployee {
         TestEmployee t1 = new TestEmployee();
         t1.filtrEmployee(list, x -> x.department == "IT" && x.salary > 200);
         System.out.println("----------------------------------------");
-        t1.filtrEmployee(list, x -> x.name.contains("E") && x.salary != 450);
+        t1.filtrEmployee(list, x -> x.name.startsWith("E") && x.salary != 450);
         System.out.println("----------------------------------------");
         t1.filtrEmployee(list, x -> x.name == x.department);
 
